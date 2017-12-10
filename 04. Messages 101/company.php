@@ -1,65 +1,23 @@
 <?php 
 
-class Person {
+/**
+ *	we use composer incase require each separate class:
+ *	1. create composer.json file in project root and leave { };
+ *	2. type in shell working directory 'composer instal';
+ *	3. update code in vendor/autoload.php file;
+ * 	4. add 'namespace Acme;' to each class in src folder;
+ *  5. type in shell working directory 'composer dump-autoload';
+ *  6. create index.php file and write require 'vendor/autoload.php' 
+ *  and 'company.php' files;
+ *  7. write use Acme\Person, Acme\Business and Acme\Staff in 'company.php' file
+ */
 
-	protected $name;
+use Acme\Person;
+use Acme\Business;
+use Acme\Staff;
 
-	public function __construct($name)
-	{
-		$this->name = $name;
-	}
-}
 
-class Business {
-
-	protected $staff;
-
-	/* each business has at least one staff which 
-	opens business, so constructor will creat one automatically */
-	public function __construct(Staff $staff)
-	{
-		$this->staff = $staff;
-	}
-
-	// method hire() sends message to Staff method add()  
-	public function hire(Person $person)
-	{
-		$this->staff->add($person);
-	}
-
-	/* method to fetch all staff members
-	which sends message to Staff method members() */
-	public function getStaffMembers()
-	{
-		return $this->staff->members();
-	}
-}
-
-class Staff {
-
-	// array of all staff
-	protected $members = [];
-
-	public function __construct($members = [])
-	{
-		$this->members = $members;
-	}
-
-	public function add(Person $person)
-	{
-		$this->members[] = $person;
-	}
-
-	// we also can name it as getMemebers() because it is a getter
-	public function members()
-	{
-		return $this->members;
-	}
-}
-
-// creating a new Person
 $jonas = new Person('Jonas Jonaitis');
-
 $staff = new Staff([$jonas]);
 $company = new Business($staff);
 $company->hire(new Person('Petras Petraitis'));
