@@ -1,6 +1,6 @@
 <?php 
 
-// examle of method usage
+// example of method usage
 class Math {
 
 	/* recent PHP version also could apply such code:
