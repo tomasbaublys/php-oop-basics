@@ -8,6 +8,6 @@ class RegisterUser {
 	{
 		var_dump('Registering the user.');
 
-		$listener->userRegisterFailed();
+		$listener->userRegisteredSuccessfully();
 	}
 }
