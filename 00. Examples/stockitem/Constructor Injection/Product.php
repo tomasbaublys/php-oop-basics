@@ -1,6 +1,6 @@
 <?php 
 
-require 'Stockitem.php';
+require 'StockItem.php';
 
 class Product {
 	private $stockItem;
@@ -8,7 +8,7 @@ class Product {
 
 	public function __construct($sku, StockItem $stockItem)
 	{
-		$this->stockItem = StockItem;
+		$this->stockItem = $stockItem;
 		$this->sku = $sku;
 	}
 
@@ -22,3 +22,12 @@ class Product {
 		return $this->sku;
 	}
 }
+
+$item = new StockItem(2, 0);
+
+$product =  new Product(1, $item);
+
+var_dump($product);
+
+
+

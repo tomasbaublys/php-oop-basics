@@ -22,4 +22,4 @@ $staff = new Staff([$jonas]);
 $company = new Business($staff);
 $company->hire(new Person('Petras Petraitis'));
 
-var_dump ($company->getStaffMembers());
+var_dump ($company);

@@ -1,6 +1,4 @@
-<?php 
-
-
+<?php
 
 class StockItem {
 	private $quantity;
@@ -22,10 +20,3 @@ class StockItem {
 		return $this->status;
 	}
 }
-
-
-
-
-
-
-
