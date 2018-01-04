@@ -27,7 +27,7 @@ $item = new StockItem(2, 0);
 $product =  new Product(1);
 $product->setStockItem($item);
 
-var_dump($product);
+var_dump($product->getStockItem());
 
 
 

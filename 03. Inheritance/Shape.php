@@ -1,23 +1,23 @@
 <?php 
 
-/* Classes defined as abstract may not be instantiated */
-
+/* Classes defined as abstract may not be initiated */
 abstract class Shape {
 	
 	protected $color;
 
+	/* we set default color to red this way: $color = 'red' */
 	public function __construct($color = 'red')
 	{
 		$this->color = $color;
 	}
 
+	/* or we could set color manualy with getColor method */
 	public function getColor()
 	{
 		return $this->color;
 	}
 
 	/* When inheriting from an abstract class, all methods marked abstract in the parent's class declaration must be defined by the child */
-
 	abstract protected function getArea();
 }
 
