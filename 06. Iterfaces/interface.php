@@ -60,7 +60,7 @@ class UsersController {
 	}
 }
 
-$controller = new UsersController(new LogToDatabase);
+$controller = new UsersController(new LogToFile);
 $controller->show();
 
 // 3. EXAMPLE filters in blog

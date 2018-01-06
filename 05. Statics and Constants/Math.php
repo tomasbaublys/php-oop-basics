@@ -29,6 +29,7 @@ class BankAccount {
 echo BankAccount::TAX . '</br>';
 
 // Bad example of static properties usage
+// Static means share
 class Person {
 	public static $age = 1;
 
