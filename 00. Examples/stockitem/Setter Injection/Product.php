@@ -7,7 +7,7 @@ class Product {
   private $sku;
   
   public function __construct($sku){
-    $this->sku        = $sku;
+    $this->sku = $sku;
   }
   
   public function getStockItem(){
@@ -23,11 +23,11 @@ class Product {
   }
 }
 
-$item = new StockItem(2, 0);
-$product =  new Product(1);
+$item = new StockItem(3, 0);
+$product = new Product('1');
 $product->setStockItem($item);
 
-var_dump($product->getStockItem());
+var_dump($product);
 
 
 
