@@ -23,7 +23,7 @@ class Product {
 	}
 }
 
-$item = new StockItem(2, 0);
+$item = new StockItem(2, 3);
 
 $product =  new Product(1, $item);
 
